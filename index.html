@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pro Image to PDF Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="container glass-card">
+      <h1>🪄 Image → PDF Converter</h1>
+
+      <div class="upload-area" id="upload-area">
+        <p>Drag & Drop Images or <span class="highlight">Click to Upload</span></p>
+        <input type="file" id="file-input" accept="image/*" multiple />
+      </div>
+
+      <div class="options">
+        <div class="option">
+          <label>Page Size:</label>
+          <select id="page-size">
+            <option value="a4">A4</option>
+            <option value="letter">Letter</option>
+            <option value="a3">A3</option>
+          </select>
+        </div>
+
+        <div class="option">
+          <label>Orientation:</label>
+          <select id="orientation">
+            <option value="portrait">Portrait</option>
+            <option value="landscape">Landscape</option>
+          </select>
+        </div>
+
+        <div class="option checkbox">
+          <label>
+            <input type="checkbox" id="compress" /> Compress Images
+          </label>
+        </div>
+      </div>
+
+      <div id="preview" class="preview"></div>
+
+      <div class="progress-container" id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+
+      <button id="convert-btn" class="convert-btn" disabled>
+        Convert to PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
