@@ -1,0 +1,130 @@
+/* ==== Base ==== */
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==== Glassmorphism Card ==== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 480px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #fff;
+}
+
+/* ==== Title ==== */
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* ==== Upload Area ==== */
+.upload-area {
+  border: 2px dashed rgba(255, 255, 255, 0.6);
+  border-radius: 14px;
+  padding: 25px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+}
+.upload-area:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.highlight {
+  color: #00f2fe;
+  font-weight: 500;
+}
+#file-input {
+  display: none;
+}
+
+/* ==== Options ==== */
+.options {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.option {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+select, input[type="checkbox"] {
+  margin-left: 5px;
+}
+
+/* ==== Preview ==== */
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  min-height: 80px;
+}
+.preview img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  margin: 5px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  cursor: grab;
+}
+.preview img:hover {
+  transform: scale(1.05);
+  border-color: #00f2fe;
+}
+
+/* ==== Progress Bar ==== */
+.progress-container {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  height: 10px;
+  margin-top: 15px;
+  display: none;
+}
+#progress-bar {
+  height: 10px;
+  background: #00f2fe;
+  border-radius: 10px;
+  width: 0%;
+}
+
+/* ==== Button ==== */
+.convert-btn {
+  margin-top: 20px;
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.convert-btn:hover {
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+}
+.convert-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
